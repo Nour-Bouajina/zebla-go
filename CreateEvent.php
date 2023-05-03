@@ -49,12 +49,14 @@ function getMap() {
   </head>
 <body>
 
-
-<button id="fillFormButton">Load old event</button>
-    <select name="titles" size=4>
-      <?php get_artical_titles()?>
-  </select>
+<h4> If you want to recreate a previous event select it from the list below</h4>
+<button id="fillFormButton">Load old event</button><br>
+<select name="titles" size=4>
+    <?php get_artical_titles()?>
+</select>
   <?php handel_messges() ?>
+
+<h4> If you want to create a new event, fill in this form</h4>
 <form action="backend/create_event.php" method="post" enctype="multipart/form-data">
 <input type="text" id="longitude" name="longitude" hidden><br>
 <input type="text" id="latitude" name="latitude" hidden><br>
@@ -101,9 +103,9 @@ function getMap() {
         <option value="Tozeur">Tozeur</option>
         <option value="Tunis">Tunis</option>
         <option value="Zaghouan">Zaghouan</option>
-
+</select>
   <label for="region-name">Write the exact name of the targeted region in the box or select it directly on map, enter a valid name and beware different spellings</label>
-  <input type="text" name="location" />
+  <input type="text" name="location" >
 
   <label for="Event_name"> Set a name for your event:</label>
   <input type="text" name="name">
@@ -112,13 +114,12 @@ function getMap() {
   <textarea name="description" cols="40" rows="10"></textarea>   
   <label for="image">Event image:</label>
   <input type="file" id="event_image" name="event_image" >
-    <input type="submit" value="Submit">
-
-    <div id="map"></div>
+  <label for="map"> Select the exact region you're targetting on the map</label>
+  <div id="map"></div>
+  <input type="submit" value="Submit">
 </form>
 </body>
 
-</div>
 
 
 
