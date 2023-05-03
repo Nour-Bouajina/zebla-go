@@ -1,0 +1,39 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+
+form{
+    display:flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100vw;
+    height: 84vh;
+}
+
+.options{
+    margin-top: 10px;
+}
+.search_input, .search_btn{
+    width: 40vw;
+    height:6vh;
+    border-radius: 15px;
+    border-color: black;
+    padding: 3px
+}
+
+.search_btn{
+    width: 10vw;
+}
+
+.search_btn:hover{
+    background-color: #fff;
+}
+
+#map{
+    width: 80vw;
+    height: 80vh;
+    margin: 10px;
+    background-color: #555;
+}

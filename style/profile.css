@@ -1,0 +1,256 @@
+/* Style the tab */
+* {
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+body{
+  overflow-y: hidden;
+  background-color: #f2f2f2;
+  margin: 0;
+}
+.parent{
+  display: flex;
+  flex-direction: row;
+  margin : 5% 10%;
+
+}
+.sidenav {
+  max-width: 300px;
+  margin-right: 3%;
+
+}
+
+.tabdiv{
+  width: 100%;
+}
+.sidenav img{
+  width: 200px; /* adjust as needed */
+  height:200px;
+  border-radius: 50%;
+}
+
+.tab {
+    overflow: hidden;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    padding: 8px;
+    margin-right: 5px;
+    background-color: #fff;
+    cursor: pointer;
+    width: 100%;
+  }
+  
+  /* Style the buttons that are used to open the tab content */
+  .tab button {
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0s;
+  }
+  
+  /* Change background color of buttons on hover */
+  .tab button:hover {
+    background-color: #ddd;
+  }
+  
+  /* Create an active/current tablink class */
+  .tab button.active {
+    background-color: #ccc;
+    border-bottom: 3px solid green;
+
+  }
+  
+  /* Style the tab content */
+  .tabcontent {
+    display: none;
+    padding: 6px 12px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    border-top: none;
+  }
+  
+  #Profile h1 {
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 20px;
+  }
+  
+  #Profile h2 {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 10px;
+  }
+  
+  
+  
+  #Profile strong {
+    font-weight: 700;
+  }
+  
+  article {
+    width : 100%;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    margin:20px;
+  }
+  article a {
+    color: #33cc33;
+    text-decoration: none;
+    border-bottom: none;
+  }
+  
+  article a:hover {
+    color: #66cc66;
+  }
+
+  article h5.footer{
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  
+    bottom: 0;
+  }
+
+
+  article img {
+    width: 200px; /* adjust as needed */
+    height:200px;
+    margin-right: 20px; /* add some spacing between image and text */
+  }
+  
+  article h1,p {
+    margin: 5PX; /* remove default margins */
+    flex: 1; /* make both title and paragraph take up remaining space */
+  }
+  #old,#currrent{
+    overflow-x: hidden;
+    overflow-y: auto;
+    height: 80vh;
+  }
+
+  
+input[type="text"],
+input[type="email"],
+input[type="password"],
+textarea {
+  display: block;
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  margin-bottom: 10px;
+}
+
+input[type="file"] {
+  margin-top: 5px;
+}
+
+button[type="submit"],
+button.reset,.edit-profile-btn {
+  padding: 8px;
+  border: none;
+  border-radius: 3px;
+  background-color: #4CAF50;
+  color: #fff;
+  cursor: pointer;
+  margin-right: 5px;
+}
+.edit-profile-btn{
+  display: inline;
+  white-space: nowrap;
+  margin: 7px 29%;
+}
+
+button[type="submit"]:hover,
+button.reset:hover {
+  background-color: #3e8e41;
+}
+
+/* Styling for messages */
+.success, .error {
+  margin-top: 10px;
+  padding: 10px;
+  border-radius: 3px;
+}
+
+.success {
+  background-color: #dff0d8;
+  color: #3c763d;
+  border: 1px solid #d6e9c6;
+}
+
+.error {
+  background-color: #f2dede;
+  color: #a94442;
+  border: 1px solid #ebccd1;
+}
+
+
+input[type="file"] {
+  display: none;
+}
+
+.upload-btn {
+  background-color: #3498db;
+  border: none;
+  color: #fff;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+.selected {
+  background-color: #2ecc71;
+}
+
+
+#Profile button[type="submit"] {
+  margin-top: 20px;
+  background-color: #c54b5b;
+
+}
+
+@media (max-width: 768px) {
+
+  article h5, article p {
+    display: None;
+  }
+  *{
+    font-size: small;
+  }
+  a{
+    font-size: x-large;
+    white-space: wrap;
+  }
+  article img {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 10px;
+    object-fit: cover;
+  }
+
+  .parent{
+    display: flex;
+    flex-direction: row;
+    margin : 5% 1%;
+  
+  }
+  .tabdiv {
+    width: 80%;
+  }
+  .tabcontent {
+    width: 100%;
+  }
+
+} 
